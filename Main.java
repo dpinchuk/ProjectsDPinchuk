@@ -1,9 +1,11 @@
 //Project_4_ClosedPolyline.
 
+import java.awt.*;
+
 public class Main extends PointsXY {
 
 //Task 4.2*. Closed polyline.
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 
         long startTime = System.currentTimeMillis(); //Time program start
 
@@ -26,8 +28,14 @@ public class Main extends PointsXY {
         // Methods.
         bubbleSort(pointsXY, 'f');  //Sort by angels - this is main module in program!!! We can sort by x - 'x', y - 'y', angel - 'f', radius - 'r'.
         showArray(pointsXY, "all"); // Show all data. Used key 'all'.
-        showArray(pointsXY);        // Overload. Show only points (x, y) of our polyline.
+        showArray(pointsXY);        // Override. Show only points (x, y) of our polyline.
         //fileWrite(path, pointsXY);  // Write data in file.
+
+        Draw draw = new Draw();
+
+        //Draw.x = 150;
+
+        draw.repaint();
 
         System.out.println();
         System.out.println("The program was carried out " + (System.currentTimeMillis() - startTime) + " milliseconds."); //Time program finish

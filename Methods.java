@@ -87,7 +87,7 @@ public class Methods implements ConstAndMethodsImplements{
         return (short)radius;
     }
 
-    // Select angles, depending on the values of x and w and quadrant.
+    // Select angles, depending on the values of x and y and quadrant.
     public static short angleFi(float x, float y) {
         int angle = 0;
         double argument = (double)y / (double)x;
@@ -115,14 +115,14 @@ public class Methods implements ConstAndMethodsImplements{
 
     // Method shows our array.
     public static void showArray(PointsXY[] pointsXY) {
-        System.out.println("An ordered list of coordinates of points on the plane for the serial connection to the broken line:");
+        System.out.println("An ordered list of coordinates of points on the plane for the serial connection to the Polyline:");
         for (byte i = 0; i < pointsXY.length; i++) {
             System.out.println("(" + pointsXY[i].x + ", " + pointsXY[i].y + ")");
         }
         System.out.println("(" + pointsXY[0].x + ", " + pointsXY[0].y + ")");
     }
 
-    // Overload method with String "all". The method shows all calculations of our array.
+    // Override method with String "all". The method shows all calculations of our array.
     public static void showArray(PointsXY[] pointsXY, String string) {
         if (string == "all") {
             for (byte i = 0; i < pointsXY.length; i++) {
